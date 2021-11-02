@@ -1,30 +1,15 @@
-Foi criado o algoritmo Primal Simplex como uma classe no arquivo "app/primal_simplex.py"
+# Introduction
 
+This is a simple FastAPI application with a Primal Simplex algorithm.
 
-Para importar a classe faça:<br>
-from app.primal_simplex import PrimalSimplex<br>
+# Deploying
 
+To deploy this application we are using docker-compose to build a container image, then to deploy the project you need to follow these steps below:
+* create a folder named "primal-simplex-api" in your Server;
+* upload all files, except "testing.py" to the folder created;
+* run the command "docker-compose up -d" from within the folder.
 
-Para criar uma instância faça:<br>
-pl = PrimalSimplex(A,b,c)<br>
+# Testing
 
-onde temos:<br>
-A:= é a matriz dos coeficientes das restrições;<br>
-b:= é o vetor dos recursos (ou termos independentes);<br>
-c:= é o vetor dos custos;<br>
-
-
-Os métodos da classe são:<br>
-solveFi():= é o método que irá encontrar uma base factível para para solução do problema de programação linear;<br>
-solve():= é o método que soluciona o problema de programação linear dado;<br>
-
-
-Os atributos da classe são:<br>
-A:= é a matriz dos coeficientes das restrições;<br>
-b:= é o vetor dos recursos (ou termos independentes);<br>
-c:= é o vetor dos custos;<br>
-base:= é o vetor de índices das colunas da matriz A que serão usadas como base;<br>
-nbase:= é o vetor de índices das colunas da matriz A que serão usadas como não base;<br>
-x:= é o vetor com a solução ótima;<br>
-fx:= é o valor ótimo da solução encontrada;<br>
+If everything is okay, we can test our application, use the file "testing.py" to test, changing "localhost" for your server address.
 
